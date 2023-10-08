@@ -1,7 +1,7 @@
 #define PI 3.14159265358979323846
-const int  max_itr = 100;
-const double min_err_f = 0.00001;
-const double min_err_x = 0.00001;
+const int  max_itr = 1000;
+const double min_err_f = 0.000001;
+const double min_err_x = 0.000001;
 
 #include <iostream>
 #include <cmath>
