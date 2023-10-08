@@ -75,7 +75,7 @@ class F3 :public F, public Secant_Method
 {
 public:
 	F3(double l = 89, double h = 49, double D = 30, double beta = 11.5 * PI / 180,
-		double x_0 = 80 * PI / 180, double x_1 = 81 * PI / 180)
+		double x_0 = 70 * PI / 180, double x_1 = 75 * PI / 180)
 		:F(l, h, D, beta), Secant_Method(x_0, x_1)
 	{}
 
