@@ -1,3 +1,4 @@
+//update?
 #define PI 3.14159265358979323846
 const int  max_itr = 1000;
 const double min_err_f = 0.000001;
