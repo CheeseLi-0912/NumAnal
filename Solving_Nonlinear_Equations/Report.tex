@@ -1,0 +1,36 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Report for Solving Nonlinear Equations}
+\author{Pingchuan Li 3210104672}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Use Bisection Method, Newton's Method and Secant Method to solve nonlinear equations.
+\end{abstract}
+
+\section{Assignment A}
+
+According to requirements (a) and (b), \verb|EquationSolver{}| is set as the abstract base class within pure virtual function \verb|f()| and \verb|solve()|. Then \verb|Bisection_Method{}|, \verb|Newton_Method{}| and \verb|Secant_Method{}| are set as derived class within realizations of \verb|f()| by each algorithm copied from Handbook. Note that \verb|Newton_Method{}| needs the derivative of \verb|f()|, so we create a pure virtual function \verb|f_diff()| exclusively.
+
+\section{Assignment B/C/D/E/F}
+
+These assignments are all based on the header file "A.h". To solve each assignment and sub question, we create a class, entering the particular function by realizing pure virtual function \verb|f()| (plus \verb|f_diff()|) and particular parameters by constructors.
+
+\section{Subjective answers to some assignments}
+F(c): We find that the result will be quite different when initial values $x_0$ and $x_1$ are far beyond approximately $75^\circ$. The reason is that Secant Method only works when the initial values are sufficiently close to the actual root. Otherwise, mostly because the initial values and the actual root are not all in a interval $[a,b]$ where $f(x)$ remains convex ($f^{"}(x)>0$ or $f^{"}(x)<0$), the iterator may not converge.
+\end{document}
