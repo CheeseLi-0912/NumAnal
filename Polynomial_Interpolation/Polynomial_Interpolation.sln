@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polynomial_Interpolation", "Polynomial_Interpolation\Polynomial_Interpolation.vcxproj", "{197F9B84-5207-42FE-B4AE-FD838676CEBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Debug|x64.ActiveCfg = Debug|x64
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Debug|x64.Build.0 = Debug|x64
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Debug|x86.ActiveCfg = Debug|Win32
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Debug|x86.Build.0 = Debug|Win32
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Release|x64.ActiveCfg = Release|x64
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Release|x64.Build.0 = Release|x64
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Release|x86.ActiveCfg = Release|Win32
+		{197F9B84-5207-42FE-B4AE-FD838676CEBE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C9F2058-B40B-401B-A242-B08EC53A98AE}
+	EndGlobalSection
+EndGlobal
