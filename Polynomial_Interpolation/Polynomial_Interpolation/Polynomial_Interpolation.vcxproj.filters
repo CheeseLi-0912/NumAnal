@@ -24,8 +24,11 @@
     <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Hermite_Polynomial.cpp">
+    <ClCompile Include="Hermite_Polynomial.h">
       <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
