@@ -1,21 +1,21 @@
-// Newton Formula
+// Hermite interpolation
 #include <iostream>
 using namespace std;
 
-class Newton_Formula
+class Hermite_Interpolation
 {
 private:
 
 	double* x; // interpolated value, carried by pointer
-	double* fx; // func to interpolated value, carried by pointer
+	double* x_diff; // derivative of interpolated value, carried by pointer
 	int n; // the numbers are x_0 to x_n
 	double t; //given value, aiming to get f(t)
 
 public:
 
-	//virtual double f(double x) = 0;
+	virtual double f(double x) = 0;
 
-	Newton_Formula(double* x, double* fx, int n, double t);
+	Hermite_Interpolation(double* x, double* x_diff, int n, double t);
 
 	double pai(int k);
 
@@ -24,28 +24,28 @@ public:
 	double solve();
 };
 
-Newton_Formula::Newton_Formula(double* x, double* fx, int n, double t)
+Hermite_Interpolation::Hermite_Interpolation(double* x, double* x_diff, int n, double t)
 {
 	this->x = x;
-	this->fx = fx;
+	this->x_diff = x_diff;
 	this->n = n;
 	this->t = t;
 }
 
-double Newton_Formula::pai(int k)
+double Hermite_Interpolation::pai(int k)
 {
 	double res = 1;
 	for (int i = 0; i <= k - 1; i++)
 	{
-		res *= t - x[i];
+		res *= (t - x[i])*(t - x_diff[i]);
 	}
 	return res;
 }
 
-double Newton_Formula::a(int i, int j)
+double Hermite_Interpolation::a(int i, int j, int n)
 {
-	if (i == j)
-		return fx[i];
+	if (i == j && n==2)
+		return f(x_diff[i]);
 	else
 		return (a(i + 1, j) - a(i, j - 1)) / (x[j] - x[i]);
 }

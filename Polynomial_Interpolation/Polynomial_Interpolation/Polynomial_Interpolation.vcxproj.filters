@@ -24,5 +24,8 @@
     <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Hermite_Polynomial.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
