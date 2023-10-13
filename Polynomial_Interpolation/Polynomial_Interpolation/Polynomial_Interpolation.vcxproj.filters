@@ -18,6 +18,9 @@
     <ClCompile Include="A.h">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="ex_2_19.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
