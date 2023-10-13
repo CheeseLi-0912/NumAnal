@@ -13,8 +13,6 @@ private:
 
 public:
 
-	//virtual double f(double x) = 0;
-
 	Newton_Formula(double* x, double* fx, int n, double t);
 
 	double pai(int k);

@@ -24,11 +24,16 @@
     <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Hermite_Polynomial.h">
+    <ClCompile Include="error_Hermite_Polynomial.h">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Hermite_Polynomial.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
