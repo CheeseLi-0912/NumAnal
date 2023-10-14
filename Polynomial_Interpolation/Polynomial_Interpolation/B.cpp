@@ -28,10 +28,10 @@ int main()
     gnuplotScript << "set terminal wxt\n";
     gnuplotScript << "set title 'Assignment B'\n";
     gnuplotScript << "plot \
-        'output_1.txt' with lines lw 2 title 'n=2',\
-        'output_2.txt' with lines lw 2 title 'n=4',\
-        'output_3.txt' with lines lw 2 title 'n=6',\
-        'output_4.txt' with lines lw 2 title 'n=8',\
+        'output_B1.txt' with lines lw 2 title 'n=2',\
+        'output_B2.txt' with lines lw 2 title 'n=4',\
+        'output_B3.txt' with lines lw 2 title 'n=6',\
+        'output_B4.txt' with lines lw 2 title 'n=8',\
              1/(1+x*x) with lines lw 5 title 'f(x)'\n";
 
     // Create a temporary Gnuplot script file
@@ -47,7 +47,7 @@ int main()
 void data_file_1()
 {
     // Create an output file stream and open a file for writing
-    ofstream outputFile("output_1.txt");
+    ofstream outputFile("output_B1.txt");
 
     // Check if the file was successfully opened
     if (!outputFile.is_open()) {
@@ -78,7 +78,7 @@ void data_file_1()
 
 void data_file_2()
 {
-    ofstream outputFile("output_2.txt");
+    ofstream outputFile("output_B2.txt");
 
     if (!outputFile.is_open()) {
         cerr << "Failed to open the output file." << endl;
@@ -105,7 +105,7 @@ void data_file_2()
 
 void data_file_3()
 {
-    ofstream outputFile("output_3.txt");
+    ofstream outputFile("output_B3.txt");
 
     if (!outputFile.is_open()) {
         cerr << "Failed to open the output file." << endl;
@@ -132,7 +132,7 @@ void data_file_3()
 
 void data_file_4()
 {
-    ofstream outputFile("output_4.txt");
+    ofstream outputFile("output_B4.txt");
 
     if (!outputFile.is_open()) {
         cerr << "Failed to open the output file." << endl;
