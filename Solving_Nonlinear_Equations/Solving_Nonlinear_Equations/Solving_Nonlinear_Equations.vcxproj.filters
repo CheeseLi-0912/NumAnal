@@ -15,24 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\B.cpp">
+    <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\C.cpp">
+    <ClCompile Include="C.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\D.cpp">
+    <ClCompile Include="D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\E.cpp">
+    <ClCompile Include="E.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\F.cpp">
+    <ClCompile Include="F.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\A.h">
+    <ClInclude Include="A.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

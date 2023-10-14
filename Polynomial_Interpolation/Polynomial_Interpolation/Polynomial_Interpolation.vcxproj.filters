@@ -18,16 +18,16 @@
     <ClCompile Include="A.h">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="ex_2_19.cpp">
+    <ClCompile Include="D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="E.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="B.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="error_Hermite_Polynomial.h">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="D.cpp">
+    <ClCompile Include="C.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

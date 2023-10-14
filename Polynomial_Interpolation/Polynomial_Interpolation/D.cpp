@@ -1,6 +1,6 @@
-// Hermite interpolation
-#include "A.h"
 #include "Hermite_Polynomial.h"
+#include <iostream>
+using namespace std;
 
 int main()
 {
@@ -10,27 +10,26 @@ int main()
 	double vel[N] = { 75, 77, 80, 74, 72 };
 	double t = 10;
 
-	Hermite_Interpolation a_position(time, dis, vel, N - 1, t);
-	cout << a_position.solve() << endl;
+	Hermite_Interpolation a_position(time, dis, vel, N - 1);
+	cout << "t=10 position: " << a_position.solve(t) << endl;
 
 	double delta = 0.00001;
-	Hermite_Interpolation a_speed1(time, dis, vel, N - 1, t);
-	Hermite_Interpolation a_speed2(time, dis, vel, N - 1, t+delta);
-	double a_speed = (a_speed2.solve() - a_speed1.solve()) / delta;
-	cout << a_speed << endl;
+	Hermite_Interpolation a_speed(time, dis, vel, N - 1);
+	double _a_speed = (a_speed.solve(t+delta) - a_speed.solve(t)) / delta;
+	cout << "t=10 speed: " << _a_speed << endl;
 
 	bool flag = false;
 	for (double t = 3; t <= 8; t = t + delta)
 	{
-		Hermite_Interpolation a_speed1(time, dis, vel, N - 1, t);
-		Hermite_Interpolation a_speed2(time, dis, vel, N - 1, t + delta);
-		a_speed = (a_speed2.solve() - a_speed1.solve()) / delta;
-		if (a_speed > 81)
+		_a_speed = (a_speed.solve(t + delta) - a_speed.solve(t)) / delta;
+		if (_a_speed > 81)
 		{
 			flag = true;
 			break;
 		}
 	}
-	cout << "Exceed: " << flag << endl;
+	cout << "Exceed 81: ";
+	if (flag) cout << "Yes" << endl;
+	else cout << "No" << endl;
 	return 0;
 }
