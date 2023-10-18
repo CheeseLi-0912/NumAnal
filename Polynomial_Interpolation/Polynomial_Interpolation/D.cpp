@@ -1,4 +1,4 @@
-#include "Hermite_Polynomial.h"
+#include "Hermite.h"
 #include <iostream>
 using namespace std;
 
@@ -10,11 +10,11 @@ int main()
 	double vel[N] = { 75, 77, 80, 74, 72 };
 	double t = 10;
 
-	Hermite_Interpolation a_position(time, dis, vel, N - 1);
+	Hermite a_position(time, dis, vel, N - 1);
 	cout << "t=10 position: " << a_position.solve(t) << endl;
 
 	double delta = 0.00001;
-	Hermite_Interpolation a_speed(time, dis, vel, N - 1);
+	Hermite a_speed(time, dis, vel, N - 1);
 	double _a_speed = (a_speed.solve(t+delta) - a_speed.solve(t)) / delta;
 	cout << "t=10 speed: " << _a_speed << endl;
 

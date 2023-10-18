@@ -32,7 +32,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Hermite_Polynomial.h">
+    <ClInclude Include="Hermite.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
