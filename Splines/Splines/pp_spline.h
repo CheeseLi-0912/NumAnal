@@ -73,22 +73,16 @@ public:
 			A(i, i + 1) = lambda[i+1];
 		}
 		A(n - 1, n - 2) = 1; A(n - 1, n - 1) = 2;
-		
-
-		/*
-		*/
-		for (int i = 1; i <= n; i++)
-			cout << 1 << endl;
 
 		for (int i = 0; i <= n - 1; i++)
 		{
 			b[i] = 6 * fx_d2[i+1];
 		}
 
-		/*if (A.fullPivLu().isInvertible())
+		if (A.fullPivLu().isInvertible())
 			X = A.fullPivLu().solve(b);
 		else
-			cout << "Matrix A is not invertible. The system may not have a unique solution.\n";*/
+			cout << "Matrix A is not invertible. The system may not have a unique solution.\n";
 
 		M = new double[n + 1];
 		for (int i = 1; i <= n; i++)
