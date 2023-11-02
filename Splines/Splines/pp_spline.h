@@ -14,8 +14,16 @@ private:
 	double* fx_d2;
 	double* M;
 public:
-	virtual double function(double x) = 0; 
-	virtual double function_d1(double x) = 0;
+	//virtual double function(double x) = 0; 
+	//virtual double function_d1(double x) = 0;
+	double function(double x)
+	{
+		return log(x);
+	}
+	double function_d1(double x)
+	{
+		return 1.0 / x;
+	}
 
 	complete_cubic_spline(double* x, int n)
 	{
@@ -56,6 +64,7 @@ public:
 		Eigen::VectorXd b(n);
 		Eigen::VectorXd X(n);
 
+		A.setZero();
 		A(0, 0) = 2; A(0, 1) = 1;
 		for (int i = 1; i <= n - 2; i++)
 		{
@@ -64,16 +73,22 @@ public:
 			A(i, i + 1) = lambda[i+1];
 		}
 		A(n - 1, n - 2) = 1; A(n - 1, n - 1) = 2;
+		
+
+		/*
+		*/
+		for (int i = 1; i <= n; i++)
+			cout << 1 << endl;
 
 		for (int i = 0; i <= n - 1; i++)
 		{
 			b[i] = 6 * fx_d2[i+1];
 		}
 
-		if (A.fullPivLu().isInvertible())
+		/*if (A.fullPivLu().isInvertible())
 			X = A.fullPivLu().solve(b);
 		else
-			cout << "Matrix A is not invertible. The system may not have a unique solution.\n";
+			cout << "Matrix A is not invertible. The system may not have a unique solution.\n";*/
 
 		M = new double[n + 1];
 		for (int i = 1; i <= n; i++)

@@ -19,11 +19,11 @@ public:
 
 int main()
 {
-	complete_cubic_spline *s;
+	//complete_cubic_spline *s;
 	int n = 5;
 	double x[6] = {0,1,2,3,4,6};
-	spline s1(x, n);
-	s = &s1;
-	cout << s->solve(5) << endl;
+	complete_cubic_spline s1(x, n);
+	//s = &s1;
+	cout << s1.solve(5) << endl;
 	return 0;
 }
