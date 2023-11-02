@@ -20,8 +20,8 @@ public:
 int main()
 {
 	//complete_cubic_spline *s;
-	int n = 5;
-	double x[6] = {0,1,2,3,4,6}; // the first 0 is to occupy an index
+	int n = 4;
+	double x[5] = {0,1,2,3,7}; // the first 0 is to occupy an index
 	complete_cubic_spline s1(x, n);
 	//s = &s1;
 	cout << s1.solve(5) << endl;
