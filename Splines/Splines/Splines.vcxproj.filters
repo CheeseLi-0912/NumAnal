@@ -18,11 +18,22 @@
     <ClCompile Include="pp_spline.h">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="Ex_3_8.cpp">
+    <ClCompile Include="B_spline.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ass_E.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="A.cpp">
+    <ClCompile Include="ass_A.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ass_C&amp;D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Spline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
