@@ -5,7 +5,7 @@
 #include <sstream>
 #include <algorithm>
 #include <cmath>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Dense>
 #include "json11.hpp"
 
 using namespace std;
