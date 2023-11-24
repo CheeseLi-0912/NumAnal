@@ -27,7 +27,7 @@
     <ClCompile Include="ass_A.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ass_C&amp;D.cpp">
+    <ClCompile Include="ass_C_D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="B_spline.h">

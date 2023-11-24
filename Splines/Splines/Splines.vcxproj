@@ -159,7 +159,7 @@
     </ClCompile>
     <ClCompile Include="B_spline.h" />
     <ClCompile Include="cardinal_B.h" />
-    <ClCompile Include="ass_C&amp;D.cpp">
+    <ClCompile Include="ass_C_D.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

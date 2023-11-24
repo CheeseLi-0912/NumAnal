@@ -13,8 +13,8 @@ double f_d1(double x)
 int n;
 double x[NUM_MAX];
 double fx[NUM_MAX];
-double a; // given by json file
-double b; // given by json file
+double a = -1; // given by json file ?
+double b = 1; // given by json file ?
 double fa_diff = f_d1(a);
 double fb_diff = f_d1(b);
 double mid_point;
@@ -24,31 +24,31 @@ string i_to_s;
 
 int main()
 {
-	// Read the JSON file
-	ifstream file("A_input.json");
-	if (!file.is_open()) {
-		cerr << "Error opening file." << endl;
-		return 1;
-	}
+	//// Read the JSON file
+	//ifstream file("A_input.json");
+	//if (!file.is_open()) {
+	//	cerr << "Error opening file." << endl;
+	//	return 1;
+	//}
 
-	// Read the content of the file into a string
-	string content((istreambuf_iterator<char>(file)), (istreambuf_iterator<char>()));
+	//// Read the content of the file into a string
+	//string content((istreambuf_iterator<char>(file)), (istreambuf_iterator<char>()));
 
-	// Parse the JSON content
-	string err;
-	auto json = json11::Json::parse(content, err);
+	//// Parse the JSON content
+	//string err;
+	//auto json = json11::Json::parse(content, err);
 
-	// Check for parsing errors
-	if (!err.empty()) {
-		cerr << "Error parsing JSON: " << err << endl;
-		return 1;
-	}
+	//// Check for parsing errors
+	//if (!err.empty()) {
+	//	cerr << "Error parsing JSON: " << err << endl;
+	//	return 1;
+	//}
 
-	// Access parameters from the JSON object
-	a = json["a"].int_value();
-	b = json["b"].int_value();
+	//// Access parameters from the JSON object
+	//a = json["a"].int_value();
+	//b = json["b"].int_value();
 
-	// above is input by json file
+	//// above is input by json file
 
 	for (int i = 1; i <= 5; i++)
 	{
