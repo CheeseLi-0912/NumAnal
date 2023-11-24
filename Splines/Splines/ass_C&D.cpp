@@ -1,4 +1,4 @@
-#include "B_spline.h"
+#include "cardinal_B.h"
 
 double f(double x)
 {
@@ -15,14 +15,14 @@ double x[NUM_MAX];
 double fx[NUM_MAX];
 double a = -5;
 double b = 5;
-string file;
+string file_name;
 string i_to_s;
 
 int main()
 {
 	// cubic
 	i_to_s = to_string(1);
-	file = "C" + i_to_s + ".txt";
+	file_name = "C" + i_to_s + ".txt";
 
 	for (int i = 1; i <= n; i++) // knots on [-5,5]
 	{
@@ -33,12 +33,12 @@ int main()
 		fx[i] = f(x[i]);
 	}
 
-	cubic_cardinal_B_spline s1(n, x, fx, a, b, f_d1(a), f_d1(b));
-	s1.interpolate_for_graph(a, b, file);
+	cubic_cardinal_B s1(n, x, fx, a, b, f_d1(a), f_d1(b));
+	s1.interpolate_for_graph(file_name);
 
 	// quadratic
 	i_to_s = to_string(2);
-	file = "C" + i_to_s + ".txt";
+	file_name = "C" + i_to_s + ".txt";
 
 	for (int i = 1; i <= n - 1; i++) // knots on [-5,5]
 	{
@@ -49,8 +49,8 @@ int main()
 		fx[i] = f(x[i]);
 	}
 		
-	quadratic_cardinal_B_spline s2(n, x, fx, a, b, f(a), f(b));
-	s2.interpolate_for_graph(a, b, file);
+	quadratic_cardinal_B s2(n, x, fx, a, b, f(a), f(b));
+	s2.interpolate_for_graph(file_name);
 
 	// Define the Gnuplot script as a string
 	std::ostringstream gnuplotScript;
@@ -75,14 +75,14 @@ int main()
 	cout << "Error for cubic cardinal B spline:" << endl;
 	for (int i = 0; i < 7; i++)
 	{
-		cout << "x = " << sites[i] << ":" << endl;
+		cout << "x = " << sites[i] << ": ";
 		cout << abs(f(sites[i]) - s1.solve(sites[i])) << endl;
 	}
 	cout << endl;
 	cout << "Error for quadratic cardinal B spline:" << endl;
 	for (int i = 0; i < 7; i++)
 	{
-		cout << "x = " << sites[i] << ":" << endl;
+		cout << "x = " << sites[i] << ": ";
 		cout << abs(f(sites[i]) - s2.solve(sites[i])) << endl;
 	}
 

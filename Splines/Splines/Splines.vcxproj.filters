@@ -18,7 +18,7 @@
     <ClCompile Include="pp_spline.h">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="B_spline.h">
+    <ClCompile Include="cardinal_B.h">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="ass_E.cpp">
@@ -30,10 +30,34 @@
     <ClCompile Include="ass_C&amp;D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="B_spline.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test1_B_spline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test2_B_spline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ass_F1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ass_F2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Spline.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="json11.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="A_input.json" />
+    <None Include="Makefile">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

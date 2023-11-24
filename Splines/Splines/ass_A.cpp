@@ -13,21 +13,47 @@ double f_d1(double x)
 int n;
 double x[NUM_MAX];
 double fx[NUM_MAX];
-double a = -1;
-double b = 1;
+double a; // given by json file
+double b; // given by json file
 double fa_diff = f_d1(a);
 double fb_diff = f_d1(b);
 double mid_point;
 double max_error;
-string file;
+string file_name;
 string i_to_s;
 
 int main()
 {
+	// Read the JSON file
+	ifstream file("A_input.json");
+	if (!file.is_open()) {
+		cerr << "Error opening file." << endl;
+		return 1;
+	}
+
+	// Read the content of the file into a string
+	string content((istreambuf_iterator<char>(file)), (istreambuf_iterator<char>()));
+
+	// Parse the JSON content
+	string err;
+	auto json = json11::Json::parse(content, err);
+
+	// Check for parsing errors
+	if (!err.empty()) {
+		cerr << "Error parsing JSON: " << err << endl;
+		return 1;
+	}
+
+	// Access parameters from the JSON object
+	a = json["a"].int_value();
+	b = json["b"].int_value();
+
+	// above is input by json file
+
 	for (int i = 1; i <= 5; i++)
 	{
 		i_to_s = to_string(i);
-		file = "A" + i_to_s + ".txt";
+		file_name = "A" + i_to_s + ".txt";
 
 		n = 5 * pow(2, i-1) + 1;
 
@@ -41,7 +67,7 @@ int main()
 		}
 
 		complete_cubic_spline s(n, x, fx, a, b, fa_diff, fb_diff);
-		s.interpolate_for_graph(a, b, file);
+		s.interpolate_for_graph(file_name);
 
 		max_error = 0;
 		for (int i = 1; i <= n - 1; i++)

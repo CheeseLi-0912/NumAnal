@@ -41,9 +41,9 @@ int main()
 	gnuplotScript << "set terminal wxt\n";
 	gnuplotScript << "set title 'Assignment E'\n";
 	gnuplotScript << "plot \
-		'output_E1.txt' with lines lw 1 title 'n=10',\
-        'output_E2.txt' with lines lw 1 title 'n=40',\
-		'output_E3.txt' with lines lw 1 title 'n=160',\n";
+		'E1.txt' with lines lw 1 title 'n=10',\
+        'E2.txt' with lines lw 1 title 'n=40',\
+		'E3.txt' with lines lw 1 title 'n=160',\n";
 
 	// Create a temporary Gnuplot script file
 	std::ofstream scriptFile("temp_plot_data_files.plt");
